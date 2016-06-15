@@ -25,7 +25,7 @@ Promise.all(
 
 ### ${kata.kata}
 
-<img src="${mediaPath(kata)}" style="width:300px"/>
+<img src="${mediaPath(kata)}" width="300px"/>
 
 `
   }

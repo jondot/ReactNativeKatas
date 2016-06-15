@@ -92,91 +92,91 @@ the `Did you know?` section.
 
 ### UsingText
 
-<img src="media/UsingText.ref.png" style="width:300px"/>
+<img src="media/UsingText.ref.png" width="300px"/>
 
 
 
 ### UsingStyles
 
-<img src="media/UsingStyles.ref.png" style="width:300px"/>
+<img src="media/UsingStyles.ref.png" width="300px"/>
 
 
 
 ### Clipping
 
-<img src="media/Clipping.ref.png" style="width:300px"/>
+<img src="media/Clipping.ref.png" width="300px"/>
 
 
 
 ### BorderRadius
 
-<img src="media/BorderRadius.ref.png" style="width:300px"/>
+<img src="media/BorderRadius.ref.png" width="300px"/>
 
 
 
 ### LoadingCard
 
-<img src="media/LoadingCard.ref.png" style="width:300px"/>
+<img src="media/LoadingCard.ref.png" width="300px"/>
 
 
 
 ### Gridding
 
-<img src="media/Gridding.ref.png" style="width:300px"/>
+<img src="media/Gridding.ref.png" width="300px"/>
 
 
 
 ### FlexSize
 
-<img src="media/FlexSize.ref.png" style="width:300px"/>
+<img src="media/FlexSize.ref.png" width="300px"/>
 
 
 
 ### FillAll
 
-<img src="media/FillAll.ref.png" style="width:300px"/>
+<img src="media/FillAll.ref.png" width="300px"/>
 
 
 
 ### Direction
 
-<img src="media/Direction.ref.png" style="width:300px"/>
+<img src="media/Direction.ref.png" width="300px"/>
 
 
 
 ### AlignmentAxis
 
-<img src="media/AlignmentAxis.ref.png" style="width:300px"/>
+<img src="media/AlignmentAxis.ref.png" width="300px"/>
 
 
 
 ### Alignment
 
-<img src="media/Alignment.ref.png" style="width:300px"/>
+<img src="media/Alignment.ref.png" width="300px"/>
 
 
 
 ### SimpleChart
 
-<img src="media/SimpleChart.ref.png" style="width:300px"/>
+<img src="media/SimpleChart.ref.png" width="300px"/>
 
 
 
 ### ProfileScreen
 
-<img src="media/ProfileScreen.ref.png" style="width:300px"/>
+<img src="media/ProfileScreen.ref.png" width="300px"/>
 
 
 
 ### ContactCard
 
-<img src="media/ContactCard.ref.png" style="width:300px"/>
+<img src="media/ContactCard.ref.png" width="300px"/>
 
 
 
 ### CalendarMonth
 
-<img src="media/CalendarMonth.ref.png" style="width:300px"/>
+<img src="media/CalendarMonth.ref.png" width="300px"/>
 
 
 <!-- KATAS_END -->
