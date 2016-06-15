@@ -99,6 +99,26 @@ explanation - it will be explained inline for your convenience, look for
 the `Did you know?` sections, `Hints` sections, and `TODO` notes.
 
 
+## Under the Hood
+
+There's a reference Kata, and a test Kata (the one you fiddle with). They're
+wrapped with a special snapshotting component that exists within the
+[runner](src/runner) infrastructure.
+
+With that, a reference Kata is mounted, rendered, snapshotted (visually), and
+then your test Kata goes through the same process. We then diff the two
+snapshots to see if the designs match for your Kata to be marked as solved.
+
+So, this is not the regular testing framework you'd expect.
+
+That was done because design needs creative freedom. This means there's more
+than one way to solve a Kata, as long as you get the same visuals!
+
+This also means that you're welcome to make forks with better solutions, and offer
+these as the de-facto reference Katas for next generations to come!
+
+
+
 ## Katas
 
 <!-- KATAS_START -->
