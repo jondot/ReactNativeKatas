@@ -19,15 +19,17 @@ made to "learn the hard way".
 Learning "the hard way" primes your brain to receive information and accelerates
 the learning process considerably on the expense of frustration.
 
-This process, like many other Kata or Koan based projects, aims to give
-you the best experience possible so that you can fail and learn from failures.
+This process, like many other Kata or Koan based projects, aims to give you
+the best experience possible so that you can fail with a nice safety net and
+learn from your failures quickly.
 
-We use:
+For this, we use:
 
 * A fancy framework that sets up, runs, and validates your Katas
 * A smart layout of learning material so that one builds on the other, yet lets you discover things on your own
+* Some times [things are repeated](https://en.wikipedia.org/wiki/Spaced_repetition)
 * React Native's live-reload for rapid iteration
-* Simulator friendly set up, so that you will get full-immersion, working on the same physical space
+* Simulator friendly set up, so that you will get full-immersion, working on the same physical space as your desktop
 * Tips and guides along the way, so that you will always know what to do
 
 ## Quick Start
@@ -42,10 +44,12 @@ You will then be faced with the first Kata.
 * Press on a Kata (anywhere) to show the reference Kata - which is what you
   should arrive at
 * Press again to go back to your answer Kata
-* Find your [src/katas](src/katas) folder, and pick the `.test` file of the
-  Kata that you see. You can also look at
-  [src/katas/index.js](src/katas/index.js) to see the full set of Katas and
-  their order. Plus, if you want to cheat (don't), that's the place.
+* Find your [src/katas](src/katas) folder
+* Get familiar with the [list of katas available](src/katas/bundle.js)
+* Per subject (flex, styling, composing), look for the `.test` version of your Kata and edit away. The reference
+Kata is the one without the `.test` suffix.
+* Example: `FillAll` under the `flex` subject, will be at [src/katas/flex/FillAll.test.js](src/katas/flex/FillAll.test.js), and
+the reference Kata will be at [src/katas/flex/FillAll.js](src/katas/flex/FillAll.js)
 * Modify, view, until both Katas match.
 * Once Katas match, you will be automatically moved to a new Kata to solve
 
@@ -82,7 +86,7 @@ sometimes very revealing.
 The reference components won't have a `test` suffix. You'll be able to find
 solutions there and if a concept is first introduced or demands a special
 explanation - it will be explained inline for your convenience, look for
-the `Did you know?` section.
+the `Did you know?` sections, `Hints` sections, and `TODO` notes.
 
 
 ## Katas
