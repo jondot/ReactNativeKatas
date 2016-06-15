@@ -12,7 +12,7 @@
 This is a project that lets you participate in a fully-immersive,
 hands-on, and fun learning experience for React Native.
 
-We will focus solely about the _design and styling_ for React Native,
+We will focus solely about _design and styling_ for React Native,
 making this a perfect learning aid for both programmers and designers
 that previously handled Sass or CSS.
 
