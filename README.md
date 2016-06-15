@@ -1,6 +1,12 @@
 <h3 align="center">
   <img src="media/rinja.png" alt="Rinja: the React Native Ninja" width="215px"/>
+  <br/>
+  <br/>
+  <br/>
+  <img src="media/ReactNativeKatas.png" alt="Rinja: the React Native Ninja" width="280px"/>
 </h3>
+<br/>
+<br/>
 
 # React Native Katas
 
