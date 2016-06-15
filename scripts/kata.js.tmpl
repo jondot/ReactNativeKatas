@@ -1,0 +1,40 @@
+import React, { Component } from 'react';
+import ReactNative, {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+} from 'react-native';
+import katastyles from '@/katas/styles'
+import Icon from 'react-native-vector-icons/Ionicons'
+import colors from '@/runner/colors'
+
+
+
+const KATA_NAME = (props)=>{
+  return (
+    <View style={styles.container}>
+      <Icon style={styles.text} name='ios-bulb-outline' size={120} />
+      <Text style={katastyles.text}>KATA_NAME</Text>
+    </View>
+  )
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor: colors[KATA_COLOR_INDEX],
+  },
+});
+
+
+
+
+
+KATA_NAME.displayName = 'KATA_NAME'
+import KATA_NAMETest from './KATA_NAME.test'
+export {KATA_NAME, KATA_NAMETest}
+
+

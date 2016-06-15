@@ -1,0 +1,42 @@
+#!/usr/bin/env node --harmony_destructuring
+'use strict';
+const path = require('path')
+const screenshotsDir = process.env.SHOTS_DIR || '/Users/dotan.nahum/Library/Developer/CoreSimulator/Devices/EFD52575-C203-4C7F-881E-2BAB540642E0/data/Containers/Data/Application/C3CFED1C-7F9F-4982-AFD2-C9EAC4A94DD9/Documents/'
+const fs = require('fs-extra')
+
+const R = require('ramda')
+const glob = require('glob')
+const files = R.reverse(glob.sync('src/katas/**/*.test.js')) // not really the order, but close enough
+const katas = R.map((f)=>{
+      const match = /src\/katas\/.*\/(.*)\.test\.js/.exec(f)
+      return {
+        kata: match[1],
+        shot: path.join(screenshotsDir, `${match[1]}.ref.png`),
+      }
+    }, files)
+const mediaPath = k=>`media/${path.basename(k.shot)}`
+
+// make a local copy and render templates into readme.
+Promise.all(
+  katas.map(k=>fs.copy(k.shot, mediaPath(k)))
+).then(()=>{
+  const template = (kata)=>{
+  return `
+
+### ${kata.kata}
+
+<img src="${mediaPath(kata)}" style="width:300px"/>
+
+`
+  }
+
+  const content = R.map(template)(katas).join('')
+  const readme = fs.readFileSync('README.md').toString()
+  fs.writeFileSync('README.md',
+      readme.replace(/<!-- KATAS_START -->[\s\S]*<!-- KATAS_END -->/gm,
+            `<!-- KATAS_START -->\n${content}\n<!-- KATAS_END -->`
+      )
+  )
+  console.log('done.')
+}).catch(err=>console.log(err))
+

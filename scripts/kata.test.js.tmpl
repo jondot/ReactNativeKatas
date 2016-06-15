@@ -1,0 +1,45 @@
+
+import React, { Component } from 'react';
+import ReactNative, {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+} from 'react-native';
+import katastyles from '@/katas/styles'
+import Icon from 'react-native-vector-icons/Ionicons'
+import colors from '@/runner/colors'
+
+
+
+// Kata subject
+//
+// Some explanation about this kata. If needed provide hints.
+// If needed, provide reference learning material.
+//
+
+const KATA_NAME= (props)=>{
+  return (
+    <View style={styles.container}>
+      <Icon style={styles.text} name='ios-bulb-outline' size={120} />
+      <Text style={katastyles.text}>KATA_NAME</Text>
+    </View>
+  )
+}
+
+
+// TODO: A focusing instruction, what's the immediate thing I need to do?
+//
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: colors[KATA_COLOR_INDEX],
+  },
+});
+
+
+
+
+
+KATA_NAME.displayName = 'KATA_NAME'
+export default KATA_NAME
+

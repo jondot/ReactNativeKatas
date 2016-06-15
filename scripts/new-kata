@@ -1,0 +1,61 @@
+#!/usr/bin/env node --harmony_destructuring
+'use strict';
+const fs = require('fs')
+const path = require('path')
+
+// $ new-kata subject, name, color-index
+//
+if(process.argv.length == 2){
+  console.log("Usage: new-kata SUBJECT NAME COLOR-INDEX")
+  console.log("Example: new-kata flex AlignAllLeft 7")
+  process.exit(1)
+}
+const kataDir = path.join(__dirname ,'/../src/katas')
+
+const [ node, script, subject='flex', name='Sample', colorIndex=0 ] = process.argv
+const colors = require('../src/runner/colors')
+const color = parseInt(`${colorIndex}`) % colors.length
+
+console.log(`Generating Kata: ${name} for ${subject}, color: ${colors[color]}`)
+
+
+
+if(!fs.existsSync(`${kataDir}/${subject}`)){
+  fs.mkdirSync(`${kataDir}/${subject}`)
+}
+
+const kata = fs.readFileSync(`${__dirname}/kata.js.tmpl`)
+let file = `${kataDir}/${subject}/${name}.js`
+fs.writeFileSync(file, kata.toString()
+                           .replace(/KATA_NAME/g, name)
+                           .replace(/KATA_COLOR_INDEX/g, color))
+console.log(`wrote: ${file}`)
+
+const katatest = fs.readFileSync(`${__dirname}/kata.test.js.tmpl`)
+file = `${kataDir}/${subject}/${name}.test.js`
+fs.writeFileSync(file,
+                 katatest.toString()
+                         .replace(/KATA_NAME/g, name)
+                         .replace(/KATA_COLOR_INDEX/g, color))
+
+console.log(`wrote: ${file}`)
+
+console.log("done.")
+
+console.log(`
+${'-'.repeat(80)}
+To integerate your new Kata:
+
+// in katas/index:
+import {${name}Test, ${name}} from './${subject}/${name}'
+
+// and then:
+const bundle = [
+  [
+    kata(FillAllTest, FillAll),
+    kata(${name}Test, ${name}),
+    // ^--- add this
+  ],
+...
+
+`)
