@@ -1,3 +1,7 @@
+<h3 align="center">
+  <img src="media/rinja.png" alt="Rinja: the React Native Ninja" />
+</h3>
+
 # React Native Katas
 
 This is a project that lets you participate in a fully-immersive,
