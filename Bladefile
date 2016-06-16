@@ -1,0 +1,9 @@
+#
+# Uncomment below to specify your own resources.
+# See https://github.com/jondot/blade for more information.
+#
+
+blades:
+  - source: media/icon.png
+    mount: ios/ReactNativeKatas/Images.xcassets/AppIcon.appiconset
+    contents: true
