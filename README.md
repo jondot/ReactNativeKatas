@@ -98,6 +98,9 @@ solutions there and if a concept is first introduced or demands a special
 explanation - it will be explained inline for your convenience, look for
 the `Did you know?` sections, `Hints` sections, and `TODO` notes.
 
+## Building Katas
+
+You're more than welcome to submit new katas. Please see the [kata building doc](docs/kata_builders.md) for details.
 
 ## Under the Hood
 

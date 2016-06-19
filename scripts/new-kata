@@ -46,10 +46,8 @@ console.log(`
 ${'-'.repeat(80)}
 To integerate your new Kata:
 
-// in katas/index:
-import {${name}Test, ${name}} from './${subject}/${name}'
+// in src/katas/bundle:
 
-// and then:
 const bundle = [
   [
     kata(FillAllTest, FillAll),
@@ -58,4 +56,6 @@ const bundle = [
   ],
 ...
 
+import {${name}Test, ${name}} from './${subject}/${name}'
+//^--- add this import
 `)
