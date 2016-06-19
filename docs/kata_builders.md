@@ -6,7 +6,7 @@ Making a kata can be easy and fun. It consists of two steps:
    follow
 2. Technically make the kata
 
-## 1. Kata Think
+## Kata Think
 
 A few pointers to guide you for creating a fun kata:
 
