@@ -45,7 +45,7 @@ import {${name}Test, ${name}} from './${subject}/${name}'
 //^--- add this import
 ```
 
-The file you will edit is [src/katas/bundle](src/katas/bundle). The bundle
+The file you will edit is [src/katas/bundle](../src/katas/bundle). The bundle
 is simply the central file in which all practical katas are imported into,
 and also holds the ordered array of katas.
 
@@ -57,7 +57,7 @@ To make kata development much easier, you'll want to do two things:
 
 1. Initially add it as the first kata. This way you don't have to go
 through all others before hitting yours.
-2. Build the solution first, then invert. If your kata is named "Spacing"
+2. Build the solution first, then invert. If your kata is named "Spacing":
 
 ```
   // Test should come first, but for working on the kata, invert:
@@ -82,5 +82,8 @@ That should be it. Happy kata building!
 If you're asking yourself about where to put your newly created katas,
 then you're more than welcome to push it into React Native Katas - submit
 a pull request.
+
+If you're having trouble adding katas, please [open an issue](https://github.com/jondot/ReactNativeKatas/issues) and I'll make sure to pass that hurdle along with you.
+
 
 
