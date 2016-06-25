@@ -7,6 +7,7 @@ import ReactNative, {
 } from 'react-native'
 
 import Done from './done'
+import Nav from './nav'
 
 class Runner extends Component {
   constructor(props){
@@ -53,7 +54,12 @@ class Runner extends Component {
     if(!CurrentComponent){
       return <View><Text>No Component!</Text></View>
     }
-    return <CurrentComponent onCompared={(similar)=>similar && this._advance()} />
+    return (
+      <View style={{flex:1}}>
+        <Nav text={CurrentComponent.displayName} />
+        <CurrentComponent onCompared={(similar)=>similar && this._advance()} />
+      </View>
+    )
   }
 }
 import kata from './kata'
