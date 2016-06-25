@@ -20,7 +20,6 @@ const AlignmentAxis = (props)=>{
         <Box />
       </View>
       <Box />
-      <Text style={styles.text}>Alignment and Axis</Text>
     </View>
   )
 }

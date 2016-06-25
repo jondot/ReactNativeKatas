@@ -24,9 +24,6 @@ const Alignment = (props)=>{
         <Box/>
       </View>
       <Box/>
-      <Text style={styles.text}>
-        Alignment
-      </Text>
     </View>
   )
 }

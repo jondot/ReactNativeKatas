@@ -15,7 +15,6 @@ const FillAll = (props)=>{
   return (
     <View style={styles.container}>
       <Icon style={styles.text} name='ios-bulb-outline' size={120} />
-      <Text style={styles.text}>Fill All</Text>
     </View>
   )
 }

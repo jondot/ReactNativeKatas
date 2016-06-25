@@ -34,7 +34,6 @@ const Gridding= (props)=>{
       </View>
       <View style={{flex:1, justifyContent:'center'}}>
         <Icon style={styles.text} name="ios-grid-outline" size={120}/>
-        <Text style={styles.text}>Grid</Text>
       </View>
       <View style={{flexDirection:'row'}}>
         <Box style={{}}/>

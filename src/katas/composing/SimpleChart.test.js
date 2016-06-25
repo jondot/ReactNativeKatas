@@ -14,10 +14,11 @@ import R from 'ramda'
 
 const chart = [11, 50, 2, 42, 10, 8]
 
+//TODO: remove the text element and replace it with a real bar
 const Bar = (props)=>{
   return(
     <View>
-      <Text>Chart!</Text>
+      <Text>Bar!</Text>
     </View>
   )
 }

@@ -24,7 +24,6 @@ const Direction = (props)=>{
         <Box/>
         <Box/>
       </View>
-      <Text style={styles.text}>Direction</Text>
     </View>
   )
 }
