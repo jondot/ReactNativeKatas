@@ -13,6 +13,7 @@
     "react": "15.0.2",
     "react-native": "^0.26.3",
     "react-native-fs": "^1.4.0",
+    "react-native-navbar": "^1.5.0",
     "react-native-vector-icons": "^2.0.3"
   }
 }
