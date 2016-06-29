@@ -47,7 +47,8 @@ I assume you already have a [working react-native setup](https://facebook.github
 
 * Clone this project
 * `npm i` and then run the project via Xcode or `react-native`
-* After running the project, turn on Live Reload (Ctrl+Cmd+Z for developer menu on Simulator)
+* After running the project, turn on Live Reload (Ctrl+Cmd+Z for developer menu on iOS Simulator)
+
 
 You will then be faced with the first Kata.
 
