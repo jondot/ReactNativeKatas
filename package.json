@@ -7,13 +7,13 @@
   },
   "dependencies": {
     "fs-extra": "^0.30.0",
-    "glob": "^7.0.3",
-    "node-resemble-js": "0.0.5",
-    "ramda": "^0.21.0",
-    "react": "15.0.2",
-    "react-native": "^0.26.3",
-    "react-native-fs": "^1.4.0",
-    "react-native-navbar": "^1.5.0",
-    "react-native-vector-icons": "^2.0.3"
+    "glob": "^7.1.0",
+    "node-resemble-js": "^0.1.1",
+    "ramda": "^0.22.1",
+    "react": "15.3.2",
+    "react-native": "0.33.0",
+    "react-native-fs": "^2.0.1-rc.2",
+    "react-native-navbar": "^1.5.1",
+    "react-native-vector-icons": "^2.1.0"
   }
 }
