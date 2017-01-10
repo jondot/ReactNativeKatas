@@ -26,7 +26,7 @@ const Direction= (props)=>{
       <Box/>
       <Box/>
       <Box/>
-      <View style={{flexDirection:'row'}}>
+      <View style={{}}>
         <Box/>
         <Box/>
         <Box/>
