@@ -3,4 +3,4 @@ import {
 } from 'react-native';
 
 import Katas from './src/katas'
-AppRegistry.registerComponent('ReactNativeKatas', () => Katas)
+AppRegistry.registerComponent('rnk', () => Katas)

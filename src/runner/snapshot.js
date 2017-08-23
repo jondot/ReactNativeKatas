@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import ReactNative, {
-  UIManager,
-} from 'react-native'
+import ReactNative, { View } from 'react-native'
+import { takeSnapshot } from "react-native-view-shot";
 
 import RNFS from 'react-native-fs'
 
@@ -16,7 +15,7 @@ export default (Subject)=>{
         if(!reference){
           const refpath = `${tmpdir}/${Subject.displayName}.ref.png`
           console.log(`snapshotting ${refpath}`)
-          UIManager.takeSnapshot('window', {format: 'png'})
+          takeSnapshot(this._view, {format: 'png'})
           .then(path=>RNFS.unlink(refpath)
                           .catch(()=>{})
                           .then(RNFS.moveFile(path, refpath))
@@ -30,7 +29,7 @@ export default (Subject)=>{
         }else{
           const targetpath = `${tmpdir}/${Subject.displayName}.png`
           console.log(`snapshotting ${targetpath}`)
-          UIManager.takeSnapshot('window', {format: 'png'})
+          takeSnapshot(this._view, {format: 'png'})
           .then(path=>RNFS.unlink(targetpath)
                           .catch(()=>{})
                           .then(RNFS.moveFile(path, targetpath))
@@ -51,8 +50,14 @@ export default (Subject)=>{
       })
     }
     render(){
-      return <Subject />
-    }
+      return (
+        <View
+          ref={view => { this._view = view; }}
+          style={{flex: 1, backgroundColor: '#fff'}}>
+          <Subject />
+        </View>
+      )
+    };
   }
 }
 
