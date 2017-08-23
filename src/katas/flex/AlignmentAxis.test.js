@@ -23,9 +23,11 @@ import Box from './box'
 const AlignmentAxis= (props)=>{
   return (
     <View style={styles.container}>
-      <Box />
-      <Box />
-      <Box />
+      <Box/>
+      <View style={{flex:1, alignItems:'flex-end', justifyContent:'flex-end'}}>
+        <Box />
+        <Box />
+      </View>
       <Box />
     </View>
   )
@@ -42,7 +44,7 @@ const styles = StyleSheet.create({
   text:{
     color: 'white',
     textAlign:'center'
-  }
+  },
 });
 
 

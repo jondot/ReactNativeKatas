@@ -25,8 +25,8 @@ import colors from '@/runner/colors'
 const UsingText= (props)=>{
   return (
     <View style={styles.container}>
-      <Text>Using</Text>
-      <Text>Text</Text>
+      <Text style={[styles.text]}>Using</Text>
+      <Text style={[styles.text,{color:"white"}]}>Text</Text>
     </View>
   )
 }
@@ -39,6 +39,9 @@ const styles = StyleSheet.create({
     alignItems:'center',
     backgroundColor: colors[1],
   },
+  text: {
+    fontSize:40,
+  }
 });
 
 
