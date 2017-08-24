@@ -21,15 +21,15 @@ import colors from '@/runner/colors'
 // - Some times constraining with margin and padding of parents vs children
 // is much better than specifying heights and widths
 // - There's no such thing as purely black shadow in nature. This is
-// the shadow color you should use: #175E4C, with opacity 0.7, offsets 2(w), 6(h)
+// the shadow color you should use: #175E4C, with opacity 0.7, offsets 2(w), 6(h) '#229E85
 //
 
 const ContactCard= (props)=>{
   return (
     <View style={[styles.container, {alignItems:'stretch'}]}>
-      <View style={{}}>
+      <View style={styles.card}>
         <View style={{flexDirection:'row'}}>
-          <View style={{width:80, height:80, backgroundColor:'#229E85'}}>
+          <View style={{width:80, height:80, backgroundColor:'#175E4C', borderRadius:40}}>
           </View>
           <View style={{}}>
             <Text style={styles.text}>Chuck Norris</Text>
@@ -50,12 +50,19 @@ const styles = StyleSheet.create({
   container: {
     flex:1,
     justifyContent:'center',
-    alignItems:'center',
+    alignItems:'stretch',
     backgroundColor: colors[2],
   },
   text:{
     color: 'white',
-    textAlign:'center'
+    textAlign:'left'
+  },
+  card: {
+    backgroundColor:"#229E85",
+    opacity:0.7,
+    padding:20,
+    marginHorizontal:5,
+    height: 130,
   }
 });
 

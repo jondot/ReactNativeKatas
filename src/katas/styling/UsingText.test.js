@@ -26,7 +26,7 @@ const UsingText= (props)=>{
   return (
     <View style={styles.container}>
       <Text style={[styles.text]}>Using</Text>
-      <Text style={[styles.text,{color:"white"}]}>Text</Text>
+      <Text style={[styles.text,{color:"white",fontStyle:"italic"}]}>T<Text style={{fontSize:60}}>ext</Text></Text>
     </View>
   )
 }
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors[1],
   },
   text: {
-    fontSize:40,
+    fontSize:100,
   }
 });
 
