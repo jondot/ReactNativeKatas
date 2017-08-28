@@ -20,10 +20,10 @@ import colors from '@/runner/colors'
 const UsingStyles= (props)=>{
   return (
     <View style={styles.container}>
-      <Text style={{}}>Using Styles</Text>
-      <Text style={{}}>Inline styles</Text>
-      <Text style={styles.inline}>Optimized StyleSheet styles</Text>
-      <Text style={[styles.inline]}>Array styles</Text>
+      <Text style={{color:"white"}}>Using Styles</Text>
+      <Text style={{color:"pink"}}>Inline styles</Text>
+      <Text style={[styles.inline,{color:"yellow"}]}>Optimized StyleSheet styles</Text>
+      <Text style={[styles.inline,{color:"lime"}]}>Array styles</Text>
     </View>
   )
 }
@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     flex:1,
   },
   inline:{
+    fontSize: 24,
   }
 });
 

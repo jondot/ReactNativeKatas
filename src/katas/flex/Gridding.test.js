@@ -27,23 +27,23 @@ const Gridding= (props)=>{
         <Box style={{flex:1}}/>
       </View>
       <View style={{flexDirection:'row'}}>
-        <Box style={{}}/>
-        <Box style={{}}/>
-        <Box style={{}}/>
-        <Box style={{}}/>
+        <Box style={{flex:1}}/>
+        <Box style={{flex:1}}/>
+        <Box style={{flex:1}}/>
+        <Box style={{flex:1}}/>
       </View>
       <View style={{flex:1, justifyContent:'center'}}>
         <Icon style={styles.text} name="ios-grid-outline" size={120}/>
       </View>
       <View style={{flexDirection:'row'}}>
-        <Box style={{}}/>
-        <Box style={{}}/>
-        <Box style={{}}/>
+        <Box style={{flex:2}}/>
+        <Box style={{flex:1}}/>
+        <Box style={{flex:1}}/>
       </View>
       <View style={{flexDirection:'row'}}>
-        <Box style={{}}/>
-        <Box style={{}}/>
-        <Box style={{}}/>
+        <Box style={{flex:1}}/>
+        <Box style={{flex:1}}/>
+        <Box style={{flex:1}}/>
       </View>
     </View>
   )

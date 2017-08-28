@@ -22,9 +22,9 @@ const Disc = (props)=><View style={[{margin:10, backgroundColor:'white', width:6
 const BorderRadius = (props)=>{
   return (
     <View style={styles.container}>
-      <Disc style={{}}/>
-      <Disc style={{}}/>
-      <Disc/>
+      <Disc style={{borderRadius:10}}/>
+      <Disc style={{borderRadius:20}}/>
+      <Disc style={{borderRadius:30}}/>
     </View>
   )
 }
