@@ -26,6 +26,7 @@ const bundle = [
   kata(ProfileScreenTest, ProfileScreen),
   kata(CalendarMonthTest, CalendarMonth),
   kata(SimpleChartTest, SimpleChart),
+  kata(TabButtonTest, TabButton),
 ]
 
 
@@ -55,4 +56,4 @@ import {ContactCardTest, ContactCard} from './composing/ContactCard'
 import {ProfileScreenTest, ProfileScreen} from './composing/ProfileScreen'
 import {CalendarMonthTest, CalendarMonth} from './composing/CalendarMonth'
 import {SimpleChartTest, SimpleChart} from './composing/SimpleChart'
-
+import {TabButtonTest, TabButton} from './composing/TabButton';
