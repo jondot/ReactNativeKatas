@@ -6,6 +6,8 @@
 //
 
 const bundle = [
+  kata(TabButtonTest, TabButton),
+
   // flex
   kata(FillAllTest, FillAll),
   kata(DirectionTest, Direction),
@@ -55,4 +57,4 @@ import {ContactCardTest, ContactCard} from './composing/ContactCard'
 import {ProfileScreenTest, ProfileScreen} from './composing/ProfileScreen'
 import {CalendarMonthTest, CalendarMonth} from './composing/CalendarMonth'
 import {SimpleChartTest, SimpleChart} from './composing/SimpleChart'
-
+import {TabButtonTest, TabButton} from './composing/TabButton';
