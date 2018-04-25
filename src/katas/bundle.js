@@ -6,8 +6,6 @@
 //
 
 const bundle = [
-  kata(TabButtonTest, TabButton),
-
   // flex
   kata(FillAllTest, FillAll),
   kata(DirectionTest, Direction),
@@ -28,6 +26,7 @@ const bundle = [
   kata(ProfileScreenTest, ProfileScreen),
   kata(CalendarMonthTest, CalendarMonth),
   kata(SimpleChartTest, SimpleChart),
+  kata(TabButtonTest, TabButton),
 ]
 
 
