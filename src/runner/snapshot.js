@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import ReactNative, {
-  UIManager,
 } from 'react-native'
-
+import { captureScreen }  from "react-native-view-shot";
 import RNFS from 'react-native-fs'
 
 const tmpdir = RNFS.DocumentDirectoryPath
@@ -16,7 +15,7 @@ export default (Subject)=>{
         if(!reference){
           const refpath = `${tmpdir}/${Subject.displayName}.ref.png`
           console.log(`snapshotting ${refpath}`)
-          UIManager.takeSnapshot('window', {format: 'png'})
+          captureScreen( {format: 'png'})
           .then(path=>RNFS.unlink(refpath)
                           .catch(()=>{})
                           .then(RNFS.moveFile(path, refpath))
@@ -30,7 +29,7 @@ export default (Subject)=>{
         }else{
           const targetpath = `${tmpdir}/${Subject.displayName}.png`
           console.log(`snapshotting ${targetpath}`)
-          UIManager.takeSnapshot('window', {format: 'png'})
+          captureScreen( {format: 'png'})
           .then(path=>RNFS.unlink(targetpath)
                           .catch(()=>{})
                           .then(RNFS.moveFile(path, targetpath))

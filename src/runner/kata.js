@@ -7,50 +7,52 @@ import ReactNative, {
 } from 'react-native';
 
 
-import snapshot from './snapshot'
-import Ok from './ok'
+import snapshot from './snapshot';
+import Ok from './ok';
 
 
-export default (KataComponent, ReferenceComponent) =>{
+export default (KataComponent, ReferenceComponent) => {
   const SnapshottedReference = snapshot(ReferenceComponent)
   const SnapshottedKata = snapshot(KataComponent)
 
   const Klass = class extends Component {
-    constructor(props){
+    constructor(props) {
       super(props)
       this._onCompared = this._onCompared.bind(this)
       this.state = {
-        referenceShot:null
+        referenceShot: null
       }
     }
-    _onCompared(similar){
-      this.setState({similar})
+    _onCompared(similar) {
+      this.setState({ similar })
       this.props.onCompared(similar)
 
     }
-    _onToggleReference(){
-      this.setState({showReference: !this.state.showReference})
+    _onToggleReference() {
+      this.setState({ showReference: !this.state.showReference })
     }
-    render(){
-      if(this.state.similar){
-        return <Ok/>
+    render() {
+      if (this.state.similar) {
+        return (<Ok />);
       }
 
-      if(this.state.showReference){
-        return <TouchableOpacity style={{flex:1}} onPress={this._onToggleReference.bind(this)}><ReferenceComponent/></TouchableOpacity>
+      if (this.state.showReference) {
+        return (<TouchableOpacity style={{ flex: 1 }} onPress={() => this._onToggleReference()}><ReferenceComponent /></TouchableOpacity>);
       }
 
-      return <TouchableOpacity style={{flex:1}} onPress={this._onToggleReference.bind(this)}>
-              {
-                (this.state.showReference || !this.state.referenceShot) &&
-                <SnapshottedReference onSnapshot={(path)=>this.setState({referenceShot: path})} />
-              }
-              {
-                (!this.state.showReference && this.state.referenceShot) &&
-                <SnapshottedKata reference={this.state.referenceShot}
-                                 onCompared={this._onCompared}/>
-              }
-             </TouchableOpacity>
+      return (
+        <TouchableOpacity style={{ flex: 1 }} onPress={() => this._onToggleReference()}>
+          {
+            (this.state.showReference || !this.state.referenceShot) &&
+            <SnapshottedReference onSnapshot={(path) => this.setState({ referenceShot: path })} />
+          }
+          {
+            (!this.state.showReference && this.state.referenceShot) &&
+            <SnapshottedKata reference={this.state.referenceShot}
+              onCompared={this._onCompared} />
+          }
+        </TouchableOpacity>
+      );
     }
   }
   Klass.displayName = ReferenceComponent.displayName
